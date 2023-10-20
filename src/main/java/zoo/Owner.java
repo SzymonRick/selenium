@@ -1,21 +1,23 @@
 package zoo;
 
 public class Owner {
+    public static void main(String[] args) {
+        Animal dog = new Animal("dog");
 
-    public static void main(String[] args){
-        Animal animal1 = new Animal();
-        Animal animal2 = new Animal();
+        dog.speak();
+//        dog.feed("jedzenie");
+//        dog.feed("jedzenie", 2);
 
-        animal1.specie = "dog";
-        animal1.age = 5;
-        animal1.isAlive = false;
-        animal1.speak();
+        Food paroowa = new Food("parówka", 50000);
+        dog.feed(paroowa);
 
-        animal2.specie = "iggor";
-        animal2.age = -2;
-        animal1.isAlive = true;
-        animal2.speak();
-        animal2.feed("egg", 10);
+        Food trutka = new Food("trutka", 50000);
+        dog.feed(trutka);
 
+        Food marchewa = new Food("marchewka", 10000);
+        dog.feed(marchewa);
+
+        Food smaczek = new Food("smaczek", 5000);
+        dog.feed(smaczek);
     }
 }
